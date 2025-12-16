@@ -25,3 +25,14 @@
 
   --input-bg: #020617;
 }
+.aichart-header {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, #00f2fe 100%);
+  padding: 2.75rem;
+  border-radius: 1rem; 
+  margin-bottom: 1.8rem;
+  color: white;
+  box-shadow: 0 12px 30px rgba(79, 172, 254, 0.25);
+  width: 100%; 
+  max-width: 1200px; 
+  align-self: center; 
+}

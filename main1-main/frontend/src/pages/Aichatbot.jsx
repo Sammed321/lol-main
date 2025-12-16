@@ -838,9 +838,9 @@ export default function AIToolsPage() {
       <style>{`
         * { box-sizing: border-box; }
        
-        .ai-tools-page { padding: 40px; }
+        .ai-tools-page { padding: 40px; display: flex;align-items: center; flex-direction: column; }
         .ai-title { font-size: 28px; margin-bottom: 24px; }
-        .ai-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .ai-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; grid-direction: rtl; width: 100%; max-width: 1000px; }
         .ai-card { background: var(--bg-card); border-radius: 16px; padding: 24px; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); border: 1px solid var(--border-color); }
         .ai-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); border-color: #2563eb; }
         .ai-icon { font-size: 32px; margin-bottom: 10px; } 
@@ -872,7 +872,7 @@ export default function AIToolsPage() {
         .session-dropdown button:hover { background: #f3f4f6; }
         .session-dropdown .delete-btn { color: #dc2626; }
         
-        .chat-main { border: 2px solid var(--text-secondary);border-radius: 18px; flex: 1; display: flex; flex-direction: column; background:var(--bg-main);padding: 20px 40px; min-height: 0; }
+        .chat-main { border: 1px solid var(--text-secondary);border-radius: 18px; flex: 1; display: flex; flex-direction: column; background:var(--bg-main);padding: 20px 40px; min-height: 0; }
         .chat-header { text-align: center; margin-bottom: 20px; }
         .gradient-title { font-size: 28px; margin: 0 0 8px 0; background: linear-gradient(90deg, #1d4ed8, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .typing-suggestions-text { color: #6b7280; margin: 0 0 30px 0; font-size: 15px; font-weight: 500; min-height: 20px; }
@@ -923,7 +923,7 @@ export default function AIToolsPage() {
         .empty-state h3 { color: #374151; margin-bottom: 8px; }
         .messages-list { display: flex; flex-direction: column; gap: 20px; }
         .message { padding: 16px; border-radius: 12px; max-width: 80%; animation: messageSlide 0.3s ease; }
-        .user-message { align-self: flex-end; background: #eff6ff; border: 1px solid #bfdbfe; }
+        .user-message { align-self: flex-end; background: var(--bg-main); border: 1px solid #bfdbfe; }
         .ai-message { align-self: flex-start; background: var(--bg-main); border: 1px solid #e5e7eb; }
         .notes-message { background: #fef3c7; border: 1px solid #fde68a; }
         .message-sender { font-size: 12px; font-weight: 600; margin-bottom: 6px; color: #4b5563; }
@@ -1576,7 +1576,7 @@ export default function AIToolsPage() {
 
       {!activeTool && (
         <div className="ai-tools-page">
-          <h1 className="ai-title">AI Tools</h1>
+          <h1 className="aichart-header">AI Tools</h1>
           <div className="ai-grid">
             <ToolCard
               title="AI Chatbot"
