@@ -1078,9 +1078,10 @@ export default function AIToolsPage() {
         .notes-main::-webkit-scrollbar-thumb:hover,
         .roadmap-main::-webkit-scrollbar-thumb:hover {
           background: #9ca3af;
+           align-items: stretch !important;
         }
         
-        .notes-header, .roadmap-header { text-align: center; margin-bottom: 20px; }
+        .notes-header{ text-align: center; margin-bottom: 20px; }
         .prompt-suggestions { display: flex; gap: 10px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
         .prompt-suggestions button { padding: 10px 20px; background: #f3f4f6; border: 2px solid #e5e7eb; border-radius: 10px; cursor: pointer; font-size: 14px; transition: all 0.2s; color: #374151; font-weight: 500; }
         .prompt-suggestions button:hover { background: #e5e7eb; border-color: #d1d5db; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
@@ -1090,10 +1091,19 @@ export default function AIToolsPage() {
           flex: 1;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
           gap: 40px;
           padding-bottom: 40px;
         }
-        
+          .roadmap-header {
+        position: relative;
+        top: 0;
+         z-index: 5;
+          background: var(--bg-main);
+         padding-top: 10px;
+         padding-bottom: 10px;
+           margin-bottom: 20px;
         .roadmap-input-section {
           display: flex;
           flex-direction: column;
